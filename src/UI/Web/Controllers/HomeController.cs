@@ -28,5 +28,10 @@ namespace GiveIT.UI.Web.Controllers
 
             return View();
         }
+
+        public ActionResult HowItWorks()
+        {
+            return View();
+        }
     }
 }
