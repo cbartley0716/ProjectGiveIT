@@ -9,26 +9,41 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
+    
+       <header>  
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
+                  <a href="Index.cshtml">  <img src="~/Images/Logo.png" alt="Logo" /></a>
+                    <!--<p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>-->      
+                </div> <!-- end float-left div -->
+              
+            
+             
                 <div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
+                    </section> 
+              
+                    <h2>Empowering the future by connecting the present.</h2>
+                </div> <!-- end float-right div -->
+         </header>    
+       
+           <nav>
+                    <ul id="menu" class="float-left">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("How it works", "HowItWorks", "Home")</li>
+                            <li>@Html.ActionLink("Join Charity", "RegisterC", "CharityRegister")</li>
+                            <li>@Html.ActionLink("Join Volunteer", "RegisterVolunteer", "Volunteer")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("How It Works", "HowItWorks", "Home")</li>
+                           
                         </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+
+            <ul id="social-media" class="float-right">
+                   <li><a href="https://plus.google.com/u/0/communities/116974375058423275957"><img src="~/Images/Google Icon.png" alt="Google Icon" /></a></li>
+                   <li><a href="https://www.facebook.com/pages/Project-Give-IT/527249827316997"><img src="~/Images/Facebook Icon.png" alt="Facebook Icon" /></a></li>
+                   <li><a href="#"><img src="~/Images/Twitter.png" alt="Twitter Icon" /></a></li>
+
+            </ul>
+         </nav>         
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
@@ -36,11 +51,16 @@
             </section>
         </div>
         <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
+           
+                    
+                    <a>Charity Legal Agreement</a>
+                <a>Volunteer Legal Agreement</a>
+            <a>Contact Us</a>
+            <a>Privacy Policy</a>
+            <a>FAQ</a>
+            <p>Project Give I.T. &copy; @DateTime.Now.Year</p>
+
+      
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
